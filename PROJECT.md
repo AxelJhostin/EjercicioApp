@@ -236,7 +236,8 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 - [x] Definir tamaño y alcance del catálogo inicial de ejercicios.
 - [x] Definir comportamiento de permisos y notificaciones en Android.
 - [ ] Definir las pantallas principales y navegación.
-- [ ] Crear inventario concreto de aproximadamente 60 ejercicios, variantes e imágenes.
+- [x] Crear inventario inicial de aproximadamente 60 ejercicios, variantes e imágenes.
+- [ ] Revisar y aprobar técnicamente el contenido del catálogo de ejercicios.
 - [ ] Definir permisos y comportamiento de notificaciones en Android.
 - [ ] Crear el proyecto Flutter.
 - [ ] Diseñar el modelo inicial de SQLite.
@@ -356,4 +357,11 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 **Fecha:** 2026-10-02  
 **Decisión:** solicitar permisos después de configurar el primer recordatorio, explicar su utilidad, permitir reintentar desde ajustes y ofrecer posponer avisos 10, 30 o 60 minutos.  
 **Motivo:** solicitar permisos en un momento relevante y mantener la aplicación funcional si el usuario los rechaza.
+
+### DEC-017 — Catálogo inicial de ejercicios
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-02  
+**Decisión:** utilizar un catálogo inicial de 60 ejercicios sin equipamiento, con variantes, prescripción inicial, nivel de impacto articular, intensidad e imagen local definidos en `EXERCISE_CATALOG.md`.  
+**Motivo:** proporcionar suficiente variedad para rutinas preprogramadas y planes personalizados sin depender de internet.
 

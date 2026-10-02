@@ -306,10 +306,12 @@ El sistema experto no utilizará inteligencia artificial ni servicios externos. 
 
 ### Catálogo de ejercicios
 
-- El catálogo inicial tendrá aproximadamente 60 ejercicios.
+- El catálogo inicial tendrá aproximadamente 60 ejercicios, definidos en [EXERCISE_CATALOG.md](EXERCISE_CATALOG.md).
 - Incluirá calentamiento, fuerza, cardio, movilidad, flexibilidad, enfriamiento y trabajo de core.
 - Se incluirán ejercicios de impacto, como saltos, siempre con advertencias y alternativas de bajo impacto cuando sea posible.
 - Cada ejercicio tendrá imagen local, instrucciones, dificultad, clasificación, duración o repeticiones, descanso y variantes.
+- Cada ejercicio tendrá impacto articular e intensidad como atributos separados.
+- Los ejercicios con riesgo técnico específico tendrán una advertencia y una alternativa adecuada.
 
 ### Permisos de notificaciones en Android
 
@@ -339,6 +341,6 @@ El sistema experto no utilizará inteligencia artificial ni servicios externos. 
 
 - Definir los valores detallados de las reglas de aumento, mantenimiento y reducción de dificultad.
 - Definir qué permisos y comportamiento de Android se aceptarán para las notificaciones.
-- Definir el inventario concreto de aproximadamente 60 ejercicios, variantes e imágenes.
+- Revisar y aprobar el contenido técnico del catálogo de aproximadamente 60 ejercicios, variantes, imágenes, impacto e intensidad.
 - Definir el contenido exacto de calentamientos y enfriamientos.
 
