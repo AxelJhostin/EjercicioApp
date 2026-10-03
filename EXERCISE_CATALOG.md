@@ -4,6 +4,8 @@
 **Fecha:** 2026-10-02  
 **Documento relacionado:** [REQUIREMENTS.md](REQUIREMENTS.md)
 
+Las instrucciones detalladas se mantienen en [EXERCISE_INSTRUCTIONS.md](EXERCISE_INSTRUCTIONS.md). Las imágenes quedan fuera de esta revisión y se incorporarán posteriormente.
+
 Este catálogo contiene 60 ejercicios sin equipamiento para el MVP. Las cantidades y tiempos son valores iniciales para el sistema experto; no sustituyen una evaluación médica.
 
 ## Convenciones

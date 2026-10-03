@@ -1,5 +1,7 @@
 # Proyecto: CasaFit
 
+**Nombre de trabajo de la aplicación:** AceroFit (pendiente de validación de disponibilidad y marca)
+
 Aplicación móvil para entrenar en casa sin equipamiento y registrar el progreso personal.
 
 ## 1. Estado del proyecto
@@ -51,7 +53,8 @@ La primera versión será privada y local. No dependerá de cuentas, servidores 
 - Gráfica de evolución del peso.
 - Gráficas básicas de constancia y rendimiento.
 - Notificaciones locales y recordatorios programados.
-- Unidades seleccionables; configuración inicial recomendada en libras y centímetros.
+- Unidades seleccionables; configuración inicial en kilogramos y centímetros, con cambio inmediato a libras.
+- Exportación e importación manual de datos locales para backup.
 - Imágenes locales para los ejercicios.
 - Borrado individual y borrado total con triple confirmación.
 - Persistencia local y funcionamiento sin internet.
@@ -73,7 +76,7 @@ La primera versión será privada y local. No dependerá de cuentas, servidores 
 
 ### Perfil y objetivos
 
-- Edad, altura y datos básicos.
+- Edad opcional, sin edad mínima obligatoria, además de altura y datos básicos.
 - Peso inicial y peso actual.
 - Objetivo: perder peso, mejorar condición, ganar fuerza o crear hábito.
 - Nivel: principiante, intermedio o avanzado.
@@ -94,7 +97,7 @@ Categorías iniciales:
 
 ### Rutinas
 
-Cada rutina tendrá objetivo, dificultad, duración aproximada, ejercicios, orden, descansos y recomendaciones de seguridad. Existirán rutinas preprogramadas y planes personalizados generados por reglas deterministas.
+Cada rutina tendrá objetivo, dificultad, duración aproximada, ejercicios, orden, descansos y recomendaciones de seguridad. Existirán rutinas preprogramadas y planes personalizados generados por reglas deterministas. El usuario podrá editar libremente sus rutinas y personalizar rutinas oficiales mediante copias editables.
 
 El sistema experto considerará objetivo, nivel, disponibilidad, duración, historial y rendimiento. La progresión podrá modificar repeticiones, tiempo, descansos o variante del ejercicio, respetando límites de seguridad y reglas explicables.
 
@@ -154,21 +157,29 @@ Cada funcionalidad debe separar, cuando tenga sentido:
 - `domain`: entidades y reglas de negocio.
 - `data`: repositorios y acceso a SQLite.
 
+El diseño técnico detallado, incluyendo tablas, relaciones, migraciones, backup, pruebas y decisiones de plataforma, se mantiene en [ARCHITECTURE_MVP.md](ARCHITECTURE_MVP.md).
+
 ## 8. Entidades principales
 
 - `UserProfile`
+- `UserPreferences`
 - `Goal`
 - `Exercise`
+- `ExerciseProgression`
 - `Routine`
 - `RoutineExercise`
-- `WorkoutSession`
-- `ExerciseRecord`
-- `BodyMeasurement`
-- `PersonalRecord`
 - `PersonalPlan`
+- `PlanAssignment`
+- `WorkoutSession`
+- `WorkoutExerciseLog`
+- `WorkoutSetLog`
+- `BodyMeasurement`
+- `BodyMeasurementValue`
+- `PersonalRecord`
 - `ProgressionRule`
 - `AppliedProgression`
 - `Reminder`
+- `ReminderDay`
 
 ## 9. Ciclo de vida del software
 
@@ -235,12 +246,20 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 - [x] Definir valores iniciales de las reglas de progresión.
 - [x] Definir tamaño y alcance del catálogo inicial de ejercicios.
 - [x] Definir comportamiento de permisos y notificaciones en Android.
-- [ ] Definir las pantallas principales y navegación.
+- [x] Definir horarios predeterminados de recordatorios.
+- [x] Definir medidas corporales iniciales para registros domésticos fiables.
+- [x] Definir backup local mediante exportación e importación.
+- [x] Definir arquitectura técnica del MVP en `ARCHITECTURE_MVP.md`.
+- [x] Definir las pantallas principales y navegación.
+- [x] Definir la dirección UX/UI inicial en `UX_UI_DESIGN.md`.
+- [ ] Validar y aprobar el nombre definitivo de la aplicación.
 - [x] Crear inventario inicial de aproximadamente 60 ejercicios, variantes e imágenes.
-- [ ] Revisar y aprobar técnicamente el contenido del catálogo de ejercicios.
-- [ ] Definir permisos y comportamiento de notificaciones en Android.
+- [x] Redactar instrucciones textuales iniciales de los ejercicios.
+- [x] Definir que el contenido inicial se basará en fuentes online documentadas, sin revisión profesional obligatoria.
+- [ ] Incorporar imágenes locales de ejercicios en una fase posterior.
+- [ ] Validar la compatibilidad final del objetivo Android y del plugin de notificaciones.
 - [ ] Crear el proyecto Flutter.
-- [ ] Diseñar el modelo inicial de SQLite.
+- [x] Diseñar el modelo técnico inicial de SQLite.
 - [ ] Implementar la primera pantalla funcional.
 - [ ] Probar la instalación en Android.
 
@@ -364,4 +383,95 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 **Fecha:** 2026-10-02  
 **Decisión:** utilizar un catálogo inicial de 60 ejercicios sin equipamiento, con variantes, prescripción inicial, nivel de impacto articular, intensidad e imagen local definidos en `EXERCISE_CATALOG.md`.  
 **Motivo:** proporcionar suficiente variedad para rutinas preprogramadas y planes personalizados sin depender de internet.
+
+### DEC-018 — Instrucciones antes que imágenes
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** revisar primero las instrucciones textuales, ejecución, respiración, seguridad y variantes. Las imágenes quedan pospuestas para una fase posterior.  
+**Motivo:** validar la calidad y seguridad del contenido antes de producir los recursos visuales.
+
+### DEC-019 — Arquitectura UX/UI del MVP
+
+**Estado:** propuesta aceptada para diseño detallado  
+**Fecha:** 2026-10-03  
+**Decisión:** utilizar cinco destinos principales: Inicio, Rutinas, Ejercicios, Progreso y Perfil. La sesión activa usará una interfaz de pantalla completa, sin barra inferior, con controles grandes, temporizadores visibles y sonido y vibración configurables.  
+**Motivo:** reducir la carga cognitiva durante el ejercicio y mantener una navegación clara fuera de la sesión.
+
+### DEC-020 — Personalización de rutinas
+
+**Estado:** propuesta aceptada para validación  
+**Fecha:** 2026-10-03  
+**Decisión:** las rutinas preprogramadas funcionarán como plantillas protegidas. El usuario podrá crear rutinas propias y personalizar una rutina preprogramada mediante una copia editable, manteniendo el original sin cambios.  
+**Motivo:** permitir flexibilidad sin alterar la referencia de las rutinas oficiales ni romper la trazabilidad de progresiones.
+
+### DEC-021 — Datos iniciales y unidades
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** serán obligatorios para crear el plan el objetivo, nivel, días concretos disponibles, duración preferida y unidad de peso. La unidad inicial será kilogramo, con cambio inmediato a libras. Edad, altura, peso y medidas serán opcionales pero recomendados.  
+**Motivo:** permitir comenzar rápidamente sin bloquear al usuario, sin renunciar a una personalización más completa.
+
+### DEC-022 — Registro de seguridad durante el entrenamiento
+
+**Estado:** propuesta aceptada para validación técnica y de contenido  
+**Fecha:** 2026-10-03  
+**Decisión:** incluir una comprobación breve de molestias en el resumen y una salida visible durante la sesión. Las opciones iniciales serán “sin molestia”, “molestia leve” y “dolor o necesito detenerme”. Una molestia o dolor no será un diagnóstico y podrá impedir una progresión automática.  
+**Motivo:** priorizar seguridad sin convertir la aplicación en una herramienta médica.
+
+### DEC-023 — Criterios visibles de bajo rendimiento
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** la interfaz explicará que una progresión puede mantenerse o reducirse cuando el usuario complete menos del 90% de la sesión, registre esfuerzo de 8 a 10, reporte dolor o acumule dos sesiones consecutivas con bajo rendimiento.  
+**Motivo:** hacer comprensible y predecible el sistema experto sin pedir al usuario que configure reglas complejas.
+
+### DEC-024 — Dirección visual y nombre de trabajo
+
+**Estado:** propuesta aceptada para exploración de marca  
+**Fecha:** 2026-10-03  
+**Decisión:** explorar una identidad inspirada en energía, acero y progreso, usando como nombre de trabajo `AceroFit`. La referencia visual será un verde azulado metálico, sobrio y deportivo; no se copiarán elementos protegidos de Max Steel. La aplicación se mantendrá gratuita y sin anuncios.  
+**Motivo:** diferenciar CasaFit de aplicaciones genéricas de ejercicio y comunicar fuerza sin perder claridad ni profesionalismo.
+
+### DEC-025 — Arquitectura técnica del MVP
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** utilizar arquitectura feature-first con capas de presentación, aplicación, dominio y datos. Riverpod gestionará el estado, Drift será la fuente de verdad local, GoRouter gestionará la navegación y las reglas del sistema experto permanecerán independientes de la interfaz. El detalle se mantiene en `ARCHITECTURE_MVP.md`.  
+**Motivo:** separar responsabilidades, facilitar pruebas y permitir futuras ampliaciones sin introducir dependencia de servicios remotos.
+
+### DEC-026 — Unidades, edad y edición de rutinas
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** almacenar internamente el peso en kilogramos y las medidas en centímetros. El usuario podrá elegir kg o lb desde la configuración inicial y cambiarlo posteriormente. La edad será opcional y no existirá una edad mínima obligatoria para usar la aplicación. Las rutinas del usuario podrán modificarse libremente; las rutinas oficiales se personalizarán mediante copias editables.  
+**Motivo:** evitar bloqueos innecesarios, conservar datos consistentes y permitir flexibilidad sin alterar el contenido oficial.
+
+### DEC-027 — Valores iniciales de progresión
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** una sesión exitosa requiere al menos 90 % completado, esfuerzo de 1 a 7, ausencia de molestia y estado completado. Después de tres sesiones exitosas consecutivas se aumentará una repetición por serie o cinco segundos. Después de otro ciclo se reducirá el descanso en cinco segundos y, después de otro ciclo, se podrá cambiar a una variante más difícil. Solo se aplicará una modificación por ciclo. Una molestia leve bloqueará la progresión; dos sesiones consecutivas de bajo rendimiento permitirán reducir el volumen o la variante.  
+**Motivo:** aplicar una progresión gradual, explicable y prudente.
+
+### DEC-028 — Backup local
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** incluir exportación e importación manual de los datos del usuario mediante un archivo local versionado. La importación inicial reemplazará transaccionalmente el perfil local después de validar el archivo y solicitar confirmación explícita.  
+**Motivo:** reducir el riesgo de pérdida de datos sin introducir servidores ni cuentas.
+
+### DEC-029 — Medidas y contenido inicial
+
+**Estado:** aceptada  
+**Fecha:** 2026-10-03  
+**Decisión:** registrar peso, cintura, cadera, pecho, brazo y muslo como medidas corporales iniciales. El contenido de ejercicios se basará en fuentes online documentadas y no requerirá una revisión profesional obligatoria antes de su integración, manteniendo advertencias de seguridad y evitando diagnósticos.  
+**Motivo:** permitir un registro doméstico consistente y avanzar con el contenido disponible sin depender de conexión durante el uso.
+
+### DEC-030 — Horarios y objetivo Android inicial
+
+**Estado:** aceptada como propuesta técnica  
+**Fecha:** 2026-10-03  
+**Decisión:** usar como valores predeterminados entrenamiento a las 18:00 en los días seleccionados, peso y medidas los domingos a las 09:00, resumen semanal los domingos a las 20:00 y aviso de progresión inmediatamente después de la sesión correspondiente. Se propone Android API 26 o superior como objetivo inicial, sujeto a validación al crear el proyecto y comprobar compatibilidad con Flutter y notificaciones locales.  
+**Motivo:** ofrecer horarios razonables y una base Android moderna sin cerrar todavía la compatibilidad definitiva del proyecto.
 

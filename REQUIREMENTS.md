@@ -34,7 +34,7 @@ El sistema experto no utilizará inteligencia artificial ni servicios externos. 
 
 - Datos básicos, objetivo, nivel y días disponibles.
 - Preferencias de unidades seleccionables.
-- Unidad inicial recomendada: peso en libras y medidas en centímetros.
+- Unidad inicial recomendada: peso en kilogramos y medidas en centímetros; el usuario puede cambiar el peso a libras.
 - Edición del perfil y preferencias.
 
 ### Ejercicios
@@ -47,6 +47,7 @@ El sistema experto no utilizará inteligencia artificial ni servicios externos. 
 ### Rutinas y planes
 
 - Rutinas preprogramadas obligatorias.
+- Creación de rutinas propias y personalización de rutinas preprogramadas mediante copias editables.
 - Creación de planes personalizados mediante un sistema experto de reglas.
 - Selección de objetivo, nivel, días disponibles y duración.
 - Progresión adaptativa de dificultad, volumen, repeticiones, tiempo o descansos.
@@ -57,6 +58,7 @@ El sistema experto no utilizará inteligencia artificial ni servicios externos. 
 - Inicio, pausa, reanudación y finalización de sesiones.
 - Temporizador de ejercicio.
 - Temporizador de descanso entre ejercicios.
+- Sonido y vibración configurables durante la sesión.
 - Registro de repeticiones, duración, esfuerzo y notas.
 - Resumen al terminar.
 
@@ -147,7 +149,7 @@ El sistema experto no utilizará inteligencia artificial ni servicios externos. 
 
 - El usuario puede crear y editar un único perfil local.
 - Objetivo, nivel, disponibilidad y unidades se guardan y reaparecen al reiniciar la aplicación.
-- El usuario puede seleccionar libras para peso y centímetros para medidas.
+- El usuario puede seleccionar kilogramos o libras para peso y centímetros para medidas; kilogramos será la opción inicial.
 - Los valores inválidos muestran mensajes claros y no se guardan.
 
 ### Biblioteca de ejercicios
