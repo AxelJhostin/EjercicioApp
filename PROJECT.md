@@ -6,8 +6,9 @@ Aplicación móvil para entrenar en casa sin equipamiento y registrar el progres
 
 ## 1. Estado del proyecto
 
-**Fase actual:** descubrimiento y definición del producto  
-**Estado:** en planificación  
+**Fase actual:** implementación de la base técnica
+
+**Estado:** proyecto Flutter Android creado; funcionalidades del MVP pendientes
 **Plataforma inicial:** Android  
 **Modo de funcionamiento:** local, sin necesidad de internet  
 **Equipamiento:** ninguno; únicamente ejercicios con el peso corporal  
@@ -258,9 +259,9 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 - [x] Definir que el contenido inicial se basará en fuentes online documentadas, sin revisión profesional obligatoria.
 - [ ] Incorporar imágenes locales de ejercicios en una fase posterior.
 - [ ] Validar la compatibilidad final del objetivo Android y del plugin de notificaciones.
-- [ ] Crear el proyecto Flutter.
+- [x] Crear el proyecto Flutter.
 - [x] Diseñar el modelo técnico inicial de SQLite.
-- [ ] Implementar la primera pantalla funcional.
+- [x] Implementar la primera pantalla funcional.
 - [ ] Probar la instalación en Android.
 
 ## 13. Registro de decisiones
@@ -311,7 +312,7 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 
 **Estado:** aceptada  
 **Fecha:** 2026-10-02  
-**Decisión:** permitir seleccionar unidades; la configuración inicial recomendada es libras para peso y centímetros para medidas. Los ejercicios tendrán imágenes locales.  
+**Decisión:** permitir seleccionar unidades; la configuración inicial es kilogramos para peso y centímetros para medidas, con cambio inmediato a libras. Los ejercicios tendrán imágenes locales.
 **Motivo:** facilita la comprensión visual y permite adaptar la experiencia sin depender de internet.
 
 ### DEC-008 — Eliminación segura de datos
@@ -474,4 +475,14 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 **Fecha:** 2026-10-03  
 **Decisión:** usar como valores predeterminados entrenamiento a las 18:00 en los días seleccionados, peso y medidas los domingos a las 09:00, resumen semanal los domingos a las 20:00 y aviso de progresión inmediatamente después de la sesión correspondiente. Se propone Android API 26 o superior como objetivo inicial, sujeto a validación al crear el proyecto y comprobar compatibilidad con Flutter y notificaciones locales.  
 **Motivo:** ofrecer horarios razonables y una base Android moderna sin cerrar todavía la compatibilidad definitiva del proyecto.
+
+### DEC-031 — Base Flutter Android
+
+**Estado:** implementada
+
+**Fecha:** 2026-10-03
+
+**Decisión:** iniciar el proyecto `casafit` para Android con Flutter 3.47.6 y Dart 3.13.5, identificador provisional `com.casafit.casafit`, Android mínimo API 26 y compilación API 37. La base incluye Material 3, cinco destinos GoRouter, ProviderScope de Riverpod y esquema Drift/SQLite versión 1 con la tabla `app_metadata`. Se agregan `drift_dev` y `build_runner` como herramientas de generación. El SDK Flutter local se guarda en `.toolchain/` y queda fuera de Git.
+
+**Motivo:** disponer de una base Android compilable, con arquitectura y persistencia verificables, antes de desarrollar las funcionalidades del MVP. El identificador Android y la compatibilidad del futuro plugin de notificaciones deberán validarse antes de publicar.
 
