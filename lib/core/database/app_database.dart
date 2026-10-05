@@ -5,6 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'tables/app_metadata.dart';
 import 'tables/exercises.dart';
 import 'tables/profile_available_days.dart';
+import 'tables/routine_exercises.dart';
+import 'tables/routines.dart';
 import 'tables/user_preferences.dart';
 import 'tables/user_profiles.dart';
 
@@ -17,6 +19,8 @@ part 'app_database.g.dart';
     UserPreferences,
     ProfileAvailableDays,
     Exercises,
+    Routines,
+    RoutineExercises,
   ],
 )
 class AppDatabase extends _$AppDatabase {
@@ -24,7 +28,7 @@ class AppDatabase extends _$AppDatabase {
     : super(executor ?? driftDatabase(name: 'casafit'));
 
   @override
-  int get schemaVersion => 3;
+  int get schemaVersion => 4;
 
   @override
   MigrationStrategy get migration => MigrationStrategy(
@@ -37,6 +41,10 @@ class AppDatabase extends _$AppDatabase {
       }
       if (from < 3) {
         await migrator.createTable(exercises);
+      }
+      if (from < 4) {
+        await migrator.createTable(routines);
+        await migrator.createTable(routineExercises);
       }
     },
     beforeOpen: (details) async {

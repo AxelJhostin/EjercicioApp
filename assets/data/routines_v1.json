@@ -1,0 +1,1285 @@
+{
+  "version": 1,
+  "routines": [
+    {
+      "id": "OFF-LOSE-BEGINNER",
+      "name": "Movimiento para empezar",
+      "description": "Alterna cardio suave y fuerza básica a un ritmo cómodo.",
+      "goal": "loseWeight",
+      "level": "beginner",
+      "estimatedMinutes": 20,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-002",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-046",
+          "sets": 2,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-007",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-048",
+          "sets": 2,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-013",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 12,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-035",
+          "sets": 2,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-LOSE-INTERMEDIATE",
+      "name": "Cardio y fuerza constante",
+      "description": "Combina intervalos moderados con piernas, core y tren superior.",
+      "goal": "loseWeight",
+      "level": "intermediate",
+      "estimatedMinutes": 30,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-004",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-047",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-016",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por lado"
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-041",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-045",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-014",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por lado"
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-050",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 5,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-054",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": "por lado"
+        },
+        {
+          "position": 10,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-LOSE-ADVANCED",
+      "name": "Circuito de alta energía",
+      "description": "Intervalos exigentes con opciones de menor impacto en cada ejercicio.",
+      "goal": "loseWeight",
+      "level": "advanced",
+      "estimatedMinutes": 40,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Incluye movimientos de alto impacto. Si no los toleras, usa la variante fácil indicada en el detalle de cada ejercicio.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-005",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-052",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-018",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 6,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-042",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-051",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 5,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-022",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-040",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 15,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 10,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-CONDITION-BEGINNER",
+      "name": "Base de condición física",
+      "description": "Trabaja coordinación y resistencia suave sin movimientos complejos.",
+      "goal": "improveCondition",
+      "level": "beginner",
+      "estimatedMinutes": 20,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-003",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": "por lado"
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-046",
+          "sets": 2,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-013",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 12,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-007",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-029",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-035",
+          "sets": 2,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-055",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": "por lado"
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-CONDITION-INTERMEDIATE",
+      "name": "Resistencia de cuerpo completo",
+      "description": "Alterna ejercicios de piernas, brazos, core y cardio moderado.",
+      "goal": "improveCondition",
+      "level": "intermediate",
+      "estimatedMinutes": 30,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-004",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-047",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-011",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por pierna"
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-022",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-041",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-014",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por lado"
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-054",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": "por lado"
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-CONDITION-ADVANCED",
+      "name": "Resistencia dinámica",
+      "description": "Sesión variada con fuerza, estabilidad y cambios de ritmo.",
+      "goal": "improveCondition",
+      "level": "advanced",
+      "estimatedMinutes": 40,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Incluye movimientos de alto impacto. Si no los toleras, usa la variante fácil indicada en el detalle de cada ejercicio.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-005",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-052",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-017",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-024",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-042",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-049",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-036",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 15,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 10,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-STRENGTH-BEGINNER",
+      "name": "Fuerza esencial",
+      "description": "Construye una base de fuerza con movimientos controlados.",
+      "goal": "gainStrength",
+      "level": "beginner",
+      "estimatedMinutes": 20,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-004",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-007",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-013",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 12,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-020",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-029",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-035",
+          "sets": 2,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-STRENGTH-INTERMEDIATE",
+      "name": "Fuerza equilibrada",
+      "description": "Entrena piernas, empuje, espalda y estabilidad del tronco.",
+      "goal": "gainStrength",
+      "level": "intermediate",
+      "estimatedMinutes": 30,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-005",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-011",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por pierna"
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-022",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-030",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-036",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 15,
+          "restSeconds": 40,
+          "notes": "por lado"
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-014",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por lado"
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-054",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": "por lado"
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-STRENGTH-ADVANCED",
+      "name": "Fuerza y control avanzado",
+      "description": "Trabaja patrones exigentes manteniendo la técnica y el control.",
+      "goal": "gainStrength",
+      "level": "advanced",
+      "estimatedMinutes": 40,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-004",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-016",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-023",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 5,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-025",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 5,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-040",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 15,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-034",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-HABIT-BEGINNER",
+      "name": "Hábito de 15 minutos",
+      "description": "Una sesión corta y accesible para empezar con constancia.",
+      "goal": "buildHabit",
+      "level": "beginner",
+      "estimatedMinutes": 15,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-002",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-046",
+          "sets": 2,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-007",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-019",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-037",
+          "sets": 2,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-HABIT-INTERMEDIATE",
+      "name": "Hábito de cuerpo completo",
+      "description": "Una rutina compacta que combina fuerza ligera y movimiento.",
+      "goal": "buildHabit",
+      "level": "intermediate",
+      "estimatedMinutes": 25,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-003",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": "por lado"
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-010",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por pierna"
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-022",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-029",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 40,
+          "notes": "por lado"
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-035",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-046",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 40,
+          "notes": null
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    },
+    {
+      "id": "OFF-HABIT-ADVANCED",
+      "name": "Constancia con desafío",
+      "description": "Mantén el hábito con fuerza, estabilidad y cardio moderado.",
+      "goal": "buildHabit",
+      "level": "advanced",
+      "estimatedMinutes": 35,
+      "kind": "official",
+      "originRoutineId": null,
+      "editable": false,
+      "archived": false,
+      "safetyNote": "Ajusta el ritmo a tu capacidad y detén el ejercicio si aparece dolor o malestar importante.",
+      "exercises": [
+        {
+          "position": 1,
+          "exerciseId": "EX-001",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 45,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 2,
+          "exerciseId": "EX-004",
+          "sets": 1,
+          "prescriptionType": "repetitions",
+          "targetReps": 10,
+          "targetSeconds": null,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 3,
+          "exerciseId": "EX-017",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 4,
+          "exerciseId": "EX-024",
+          "sets": 3,
+          "prescriptionType": "repetitions",
+          "targetReps": 8,
+          "targetSeconds": null,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 5,
+          "exerciseId": "EX-031",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 6,
+          "exerciseId": "EX-041",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 20,
+          "restSeconds": 45,
+          "notes": null
+        },
+        {
+          "position": 7,
+          "exerciseId": "EX-036",
+          "sets": 3,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 15,
+          "restSeconds": 45,
+          "notes": "por lado"
+        },
+        {
+          "position": 8,
+          "exerciseId": "EX-053",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 30,
+          "restSeconds": 0,
+          "notes": null
+        },
+        {
+          "position": 9,
+          "exerciseId": "EX-060",
+          "sets": 1,
+          "prescriptionType": "seconds",
+          "targetReps": null,
+          "targetSeconds": 60,
+          "restSeconds": 0,
+          "notes": null
+        }
+      ]
+    }
+  ]
+}

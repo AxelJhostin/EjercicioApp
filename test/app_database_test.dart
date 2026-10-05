@@ -16,6 +16,6 @@ void main() {
         .get();
 
     expect(rows.single.read<String>('value'), '1');
-    expect(database.schemaVersion, 3);
+    expect(database.schemaVersion, 4);
   });
 }

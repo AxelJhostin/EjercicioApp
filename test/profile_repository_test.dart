@@ -80,7 +80,7 @@ void main() {
     expect(await repository.load(), isNull);
   });
 
-  test('migración 1→3 conserva metadatos y crea tablas nuevas', () async {
+  test('migración 1→4 conserva metadatos y crea tablas nuevas', () async {
     final file = File(
       '${Directory.systemTemp.path}${Platform.pathSeparator}casafit_migration_${DateTime.now().microsecondsSinceEpoch}.sqlite',
     );
@@ -96,6 +96,8 @@ void main() {
     await oldDatabase.customStatement('DROP TABLE profile_available_days');
     await oldDatabase.customStatement('DROP TABLE user_preferences');
     await oldDatabase.customStatement('DROP TABLE user_profiles');
+    await oldDatabase.customStatement('DROP TABLE routine_exercises');
+    await oldDatabase.customStatement('DROP TABLE routines');
     await oldDatabase.customStatement('DROP TABLE exercises');
     await oldDatabase.customStatement('PRAGMA user_version = 1');
     await oldDatabase.close();
@@ -110,7 +112,7 @@ void main() {
     final version = await upgraded
         .customSelect('PRAGMA user_version')
         .getSingle();
-    expect(version.read<int>('user_version'), 3);
+    expect(version.read<int>('user_version'), 4);
     final exerciseCount = await upgraded
         .customSelect('SELECT COUNT(*) AS total FROM exercises')
         .getSingle();

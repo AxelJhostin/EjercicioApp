@@ -8,7 +8,7 @@ Aplicación móvil para entrenar en casa sin equipamiento y registrar el progres
 
 **Fase actual:** implementación de la base técnica
 
-**Estado:** base Android y configuración del perfil local implementadas; resto del MVP pendiente
+**Estado:** base Android, perfil, biblioteca de ejercicios y consulta de rutinas oficiales implementados; resto del MVP pendiente
 **Plataforma inicial:** Android  
 **Modo de funcionamiento:** local, sin necesidad de internet  
 **Equipamiento:** ninguno; únicamente ejercicios con el peso corporal  
@@ -264,6 +264,7 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 - [x] Implementar la primera pantalla funcional.
 - [x] Implementar configuración inicial y edición del perfil local.
 - [x] Integrar catálogo local de 60 ejercicios, filtros y detalle con instrucciones.
+- [x] Integrar 12 rutinas oficiales con ejercicios ordenados, prescripciones y descansos.
 - [ ] Probar la instalación en Android.
 
 La compilación de depuración para Android se verificó el 2026-10-05. La instalación en el AVD `Medium_Phone_API_37.0` sigue pendiente porque el equipo no tiene habilitado el controlador de aceleración del emulador Android.
@@ -509,4 +510,14 @@ La compilación de depuración para Android se verificó el 2026-10-05. La insta
 **Decisión:** generar un asset JSON versionado desde `EXERCISE_CATALOG.md` y `EXERCISE_INSTRUCTIONS.md`, cargar sus 60 ejercicios en Drift de forma idempotente y separar `catalogVersion` de `schemaVersion`. El esquema SQLite pasa a versión 3 con migración desde las versiones anteriores. La biblioteca ofrece búsqueda por nombre y filtros por categoría y dificultad en una hoja inferior; el detalle muestra prescripción, ejecución, respiración, seguridad y variantes. Los ejercicios de alto impacto señalan su variante fácil como alternativa. Hasta incorporar las imágenes locales se muestra un marcador de posición explícito.
 
 **Motivo:** hacer consultable el contenido aprobado sin conexión y preparar su uso posterior en rutinas, manteniendo la fase de imágenes pendiente según DEC-018.
+
+### DEC-034 — Rutinas oficiales locales
+
+**Estado:** consulta implementada; inicio de sesión pendiente
+
+**Fecha:** 2026-10-05
+
+**Decisión:** distribuir 12 plantillas oficiales sin equipamiento, una por cada combinación de los cuatro objetivos y los tres niveles. Cada plantilla incluye duración estimada, advertencia de seguridad y ejercicios en orden con series, repeticiones o segundos, y descanso sugerido. Su contenido se genera como asset local versionado a partir de los IDs del catálogo de ejercicios y se carga en Drift como plantillas no editables. SQLite pasa a esquema versión 4 con `routines` y `routine_exercises`; `routineCatalogVersion` es independiente de la versión del esquema y del catálogo de ejercicios. La pantalla Rutinas permite filtrar por objetivo y nivel, consultar el detalle y abrir las instrucciones de cada ejercicio. El inicio de sesiones y las copias editables se desarrollarán en los siguientes incrementos.
+
+**Motivo:** ofrecer una selección inmediata y estable de rutinas, preservar las plantillas oficiales y preparar la futura ejecución y personalización sin alterar el contenido de referencia.
 

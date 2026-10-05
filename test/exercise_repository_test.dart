@@ -71,7 +71,7 @@ void main() {
     );
   });
 
-  test('migración 2→3 conserva el perfil y crea el catálogo', () async {
+  test('migración 2→4 conserva el perfil y crea el catálogo', () async {
     final file = File(
       '${Directory.systemTemp.path}${Platform.pathSeparator}casafit_exercises_${DateTime.now().microsecondsSinceEpoch}.sqlite',
     );
@@ -94,6 +94,8 @@ void main() {
       'INSERT INTO app_metadata (name, value) VALUES (?, ?)',
       ['catalogVersion', '1'],
     );
+    await oldDatabase.customStatement('DROP TABLE routine_exercises');
+    await oldDatabase.customStatement('DROP TABLE routines');
     await oldDatabase.customStatement('DROP TABLE exercises');
     await oldDatabase.customStatement('PRAGMA user_version = 2');
     await oldDatabase.close();
@@ -105,6 +107,6 @@ void main() {
     final version = await upgraded
         .customSelect('PRAGMA user_version')
         .getSingle();
-    expect(version.read<int>('user_version'), 3);
+    expect(version.read<int>('user_version'), 4);
   });
 }

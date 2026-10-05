@@ -7,6 +7,8 @@ import '../../features/exercises/presentation/exercise_library_screen.dart';
 import '../../features/home/presentation/home_screen.dart';
 import '../../features/profile/presentation/profile_form_screen.dart';
 import '../../features/profile/presentation/profile_screen.dart';
+import '../../features/routines/presentation/routine_detail_screen.dart';
+import '../../features/routines/presentation/routine_library_screen.dart';
 import '../../shared/widgets/section_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
@@ -32,11 +34,15 @@ final routerProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: '/routines',
-            builder: (context, state) => const SectionScreen(
-              title: 'Rutinas',
-              message: 'Aquí aparecerán tus rutinas para entrenar en casa.',
-              icon: Icons.fitness_center_outlined,
-            ),
+            builder: (context, state) => const RoutineLibraryScreen(),
+            routes: [
+              GoRoute(
+                path: ':routineId',
+                builder: (context, state) => RoutineDetailScreen(
+                  routineId: state.pathParameters['routineId']!,
+                ),
+              ),
+            ],
           ),
           GoRoute(
             path: '/exercises',
