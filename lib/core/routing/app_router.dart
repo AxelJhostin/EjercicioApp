@@ -2,13 +2,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/exercises/presentation/exercise_detail_screen.dart';
+import '../../features/exercises/presentation/exercise_library_screen.dart';
 import '../../features/home/presentation/home_screen.dart';
+import '../../features/profile/presentation/profile_form_screen.dart';
+import '../../features/profile/presentation/profile_screen.dart';
 import '../../shared/widgets/section_screen.dart';
 
 final routerProvider = Provider<GoRouter>((ref) {
   final router = GoRouter(
     initialLocation: '/home',
     routes: [
+      GoRoute(
+        path: '/onboarding',
+        builder: (context, state) =>
+            const ProfileFormScreen(isOnboarding: true),
+      ),
+      GoRoute(
+        path: '/profile/edit',
+        builder: (context, state) =>
+            const ProfileFormScreen(isOnboarding: false),
+      ),
       ShellRoute(
         builder: (context, state, child) => _MainShell(child: child),
         routes: [
@@ -26,12 +40,15 @@ final routerProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: '/exercises',
-            builder: (context, state) => const SectionScreen(
-              title: 'Ejercicios',
-              message:
-                  'Aquí estará la biblioteca de ejercicios sin equipamiento.',
-              icon: Icons.directions_run_outlined,
-            ),
+            builder: (context, state) => const ExerciseLibraryScreen(),
+            routes: [
+              GoRoute(
+                path: ':exerciseId',
+                builder: (context, state) => ExerciseDetailScreen(
+                  exerciseId: state.pathParameters['exerciseId']!,
+                ),
+              ),
+            ],
           ),
           GoRoute(
             path: '/progress',
@@ -43,11 +60,7 @@ final routerProvider = Provider<GoRouter>((ref) {
           ),
           GoRoute(
             path: '/profile',
-            builder: (context, state) => const SectionScreen(
-              title: 'Perfil',
-              message: 'Aquí podrás configurar tus preferencias.',
-              icon: Icons.person_outline,
-            ),
+            builder: (context, state) => const ProfileScreen(),
           ),
         ],
       ),

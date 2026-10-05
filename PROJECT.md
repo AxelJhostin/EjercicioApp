@@ -8,7 +8,7 @@ Aplicación móvil para entrenar en casa sin equipamiento y registrar el progres
 
 **Fase actual:** implementación de la base técnica
 
-**Estado:** proyecto Flutter Android creado; funcionalidades del MVP pendientes
+**Estado:** base Android y configuración del perfil local implementadas; resto del MVP pendiente
 **Plataforma inicial:** Android  
 **Modo de funcionamiento:** local, sin necesidad de internet  
 **Equipamiento:** ninguno; únicamente ejercicios con el peso corporal  
@@ -262,7 +262,11 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 - [x] Crear el proyecto Flutter.
 - [x] Diseñar el modelo técnico inicial de SQLite.
 - [x] Implementar la primera pantalla funcional.
+- [x] Implementar configuración inicial y edición del perfil local.
+- [x] Integrar catálogo local de 60 ejercicios, filtros y detalle con instrucciones.
 - [ ] Probar la instalación en Android.
+
+La compilación de depuración para Android se verificó el 2026-10-05. La instalación en el AVD `Medium_Phone_API_37.0` sigue pendiente porque el equipo no tiene habilitado el controlador de aceleración del emulador Android.
 
 ## 13. Registro de decisiones
 
@@ -485,4 +489,24 @@ Prepara APKs, versiones, notas de cambios, instalación en el celular y control 
 **Decisión:** iniciar el proyecto `casafit` para Android con Flutter 3.47.6 y Dart 3.13.5, identificador provisional `com.casafit.casafit`, Android mínimo API 26 y compilación API 37. La base incluye Material 3, cinco destinos GoRouter, ProviderScope de Riverpod y esquema Drift/SQLite versión 1 con la tabla `app_metadata`. Se agregan `drift_dev` y `build_runner` como herramientas de generación. El SDK Flutter local se guarda en `.toolchain/` y queda fuera de Git.
 
 **Motivo:** disponer de una base Android compilable, con arquitectura y persistencia verificables, antes de desarrollar las funcionalidades del MVP. El identificador Android y la compatibilidad del futuro plugin de notificaciones deberán validarse antes de publicar.
+
+### DEC-032 — Perfil local y configuración inicial
+
+**Estado:** implementada
+
+**Fecha:** 2026-10-05
+
+**Decisión:** permitir crear y editar un único perfil local con objetivo, nivel, días concretos, duración preferida de 15 a 45 minutos y unidad de peso. La duración inicial visible es 30 minutos y la unidad inicial es kg. Nombre, edad, altura y peso inicial son opcionales. El peso se convierte y guarda en kg, aunque el usuario elija lb. El formulario se abre desde Inicio o Perfil sin bloquear la navegación principal; los datos obligatorios se exigirán para crear un plan cuando esa funcionalidad exista. Drift pasa a esquema versión 2 con `user_profiles`, `user_preferences` y `profile_available_days`, mediante una migración desde la versión 1 probada.
+
+**Motivo:** completar una primera funcionalidad local y editable sin impedir que la persona explore la aplicación antes de configurar un plan.
+
+### DEC-033 — Biblioteca local de ejercicios
+
+**Estado:** implementada parcialmente; imágenes locales pendientes
+
+**Fecha:** 2026-10-05
+
+**Decisión:** generar un asset JSON versionado desde `EXERCISE_CATALOG.md` y `EXERCISE_INSTRUCTIONS.md`, cargar sus 60 ejercicios en Drift de forma idempotente y separar `catalogVersion` de `schemaVersion`. El esquema SQLite pasa a versión 3 con migración desde las versiones anteriores. La biblioteca ofrece búsqueda por nombre y filtros por categoría y dificultad en una hoja inferior; el detalle muestra prescripción, ejecución, respiración, seguridad y variantes. Los ejercicios de alto impacto señalan su variante fácil como alternativa. Hasta incorporar las imágenes locales se muestra un marcador de posición explícito.
+
+**Motivo:** hacer consultable el contenido aprobado sin conexión y preparar su uso posterior en rutinas, manteniendo la fase de imágenes pendiente según DEC-018.
 

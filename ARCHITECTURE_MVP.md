@@ -486,6 +486,7 @@ Destinos principales:
 /exercises/:exerciseId
 /progress
 /profile
+/profile/edit
 /profile/settings
 /plan/create
 /plan/:planId
